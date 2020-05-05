@@ -1,0 +1,5 @@
+v1. copiado txt para o arquivo
+
+v2. adicionado linha 51 Melhora a produtividade ao se utilizar Shell Script.
+
+v3. Modificado linha 53 manipular melhor os conteudos internos no computador. para Facilita a manipulação dos conteudos internos no computador.
