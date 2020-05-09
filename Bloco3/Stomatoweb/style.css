@@ -12,7 +12,7 @@ header {
     margin-left: 12%;
 }
 #pagetitle {
-    padding-top: 4%;
+    padding-top: 2%;
 }
 .sidenav {
     background: rgb(255,255,255);
@@ -24,7 +24,7 @@ header {
     width: 10%;
     z-index: 2;
     margin-top: 4%;
-    border-right: black 1px solid;
+    border-right: 1px solid;
     border-image: linear-gradient(to bottom, rgba(0,0,0,0) 4%, #31beb0 25% ) 1 100%;    
 
 }
@@ -32,12 +32,14 @@ header {
     background-color: white;
 }
 .sidelinks {
+    font-size: 0.7em;
+    text-decoration: none;
     padding: 2%;
     padding-bottom: 5%;
 }
 .aside {
-    background-color: gray;
-    border: black solid 1px;
+    background-color: rgba(219,238,236,1);
+    border: rgb(162, 169, 177) solid 1px;
     margin-left: 2%;
     margin-right: 27%;
     padding: 1%;
@@ -55,11 +57,11 @@ header {
 .table {
     width: 22%;
     float: right;
-    background-color: white;
-    border: black solid 2px;
+    background-color: rgb(248, 249, 250);
+    border: rgb(162, 169, 177) solid 1px;
     margin-top: 5%;
-    margin-left: 1%;
-    padding: 1%;
+    margin-left: 2%;
+    padding: 0.3%;
     overflow: auto;    
 }
 .table__image {
@@ -74,7 +76,9 @@ tr > td {
     padding-bottom: 5%;
 }
 .table__text--background{
-    background-color: darkred;
+    background-color: rgba(219,238,236,1);
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: center;
     width: 99%;
     overflow: auto;
