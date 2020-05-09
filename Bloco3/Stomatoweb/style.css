@@ -128,3 +128,14 @@ tr > td {
     margin-top: 0%;
     height: 1%;
 }
+.bodylinks {
+    text-decoration: none;
+}
+.asidesubtitles {
+    clear: left;
+    width: 74%;
+    border: solid 0px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid rgb(162, 169, 177);
+}
