@@ -28,25 +28,26 @@ header {
     border-image: linear-gradient(to bottom, rgba(0,0,0,0) 4%, #31beb0 25% ) 1 100%;    
 
 }
-.sidenav.gradient {
-    background-color: white;
-}
 .sidelinks {
     font-size: 0.7em;
     text-decoration: none;
-    padding: 2%;
+    padding-left: 2%;
     padding-bottom: 5%;
+    position: relative;
+    top: 15%;
 }
 .aside {
     background-color: rgba(219,238,236,1);
     border: rgb(162, 169, 177) solid 1px;
     margin-left: 2%;
     margin-right: 27%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding: 1%;
     font-style: 0.9em;
 }
 #facts {
-    border: solid 0px black;
+    border: solid 0px;
     border-bottom: solid 1px black;
     margin-bottom: 1%;
 }
@@ -88,4 +89,14 @@ tr > td {
     margin-left: 14%;
     margin-right: 2%;
     text-align: justify;
+}
+.subtitles {
+    width: 74%;
+    border: solid 0px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid rgb(162, 169, 177);
+}
+p {
+    margin-right: 26%;
 }
