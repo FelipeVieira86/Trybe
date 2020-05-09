@@ -29,6 +29,7 @@ header {
 
 }
 .sidelinks {
+    margin-left: 25%;
     font-size: 0.7em;
     text-decoration: none;
     padding-left: 2%;
@@ -91,6 +92,7 @@ tr > td {
     text-align: justify;
 }
 .subtitles {
+    clear: left;
     width: 74%;
     border: solid 0px;
     margin-top: 2%;
@@ -99,4 +101,18 @@ tr > td {
 }
 p {
     margin-right: 26%;
+    line-height: 1.8em;
+}
+.habitatpic {
+    background-color: #f8f9fa;
+    width: 15%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 0.3%; 
+    border: 1px solid rgb(162, 169, 177);
+}
+aside p {
+    line-height: 1.3em;
+    margin-right: auto;
 }
