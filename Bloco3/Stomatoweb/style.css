@@ -119,6 +119,7 @@ tr > td {
 .footer__text {
     margin-top: 0.3em;
     font-size: 0.6em;
+    font-weight: bold;
 }
 .footer {
     border: solid 0px;
