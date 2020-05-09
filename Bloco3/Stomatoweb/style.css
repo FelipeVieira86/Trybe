@@ -73,10 +73,6 @@ table td {
     text-align: left;
     font-size: 0.9em;
 }
-tr > td {
-    padding-right: 15%;
-    padding-bottom: 5%;
-}
 .table__text--background{
     background-color: rgba(219,238,236,1);
     padding-top: 3%;
@@ -115,4 +111,8 @@ p {
 aside p {
     line-height: 1.3em;
     margin-right: auto;
+}
+tr > td {
+    padding-right: 15%;
+    padding-bottom: 5%;
 }
