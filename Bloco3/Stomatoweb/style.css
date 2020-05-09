@@ -95,7 +95,7 @@ table td {
     margin-bottom: 2%;
     border-bottom: 1px solid rgb(162, 169, 177);
 }
-p {
+p, li {
     margin-right: 26%;
     line-height: 1.8em;
 }
@@ -104,7 +104,16 @@ p {
     width: 15%;
     float: left;
     margin-right: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+    padding: 0.3%; 
+    border: 1px solid rgb(162, 169, 177);
+}
+.visionpic {
+    background-color: #f8f9fa;
+    width: 15%;
+    float: right;
+    margin-left: 2%;
+    margin-bottom: 0.2%;
     padding: 0.3%; 
     border: 1px solid rgb(162, 169, 177);
 }
@@ -125,7 +134,7 @@ tr > td {
     border: solid 0px;
     border-top: solid 1px black;
     margin-bottom: 0%;
-    margin-top: 0%;
+    margin-top: 2%;
     height: 1%;
 }
 .bodylinks {
@@ -133,9 +142,34 @@ tr > td {
 }
 .asidesubtitles {
     clear: left;
-    width: 74%;
+    width: 30%;
     border: solid 0px;
     margin-top: 2%;
     margin-bottom: 2%;
     border-bottom: 1px solid rgb(162, 169, 177);
+}
+.mantispic {
+    background-color: #f8f9fa;
+    width: 8%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 0.1%;
+    padding: 0.3%; 
+    border: 1px solid rgb(162, 169, 177);
+}
+.clearright {
+    clear: right;
+}
+.clearleft {
+    clear: left;
+}
+.mantispic2 {
+    background-color: #f8f9fa;
+    width: 25%;
+    float: right;
+    margin-right: 26%;
+    margin-left: 2%;
+    margin-bottom: 0.1%;
+    padding: 0.3%; 
+    border: 1px solid rgb(162, 169, 177);
 }
