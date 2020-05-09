@@ -2,61 +2,86 @@
 <html lang="pt-br">
     <head>
         <title>The Mighty Mantis Shrimp</title>
+        <link rel="stylesheet" type="text/css" href="style.css">  
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
+        <nav class="sidenav">
+            <a class="firstlink sidelinks" href="">Main Page</a><br>
+            <a class="sidelinks" href="">About</a><br>
+            <a class="sidelinks" href="">Contact</a><br>
+        </nav>
         <section>
-            <header>
-              <h1>50 mph Punch: Meet the Mantis Shrimp.</h1>
+          <!-- <header>
+                <h1 id="pagetitle">50 mph Punch: Meet the Mantis Shrimp.</h1>
             </header>
-            <nav>
-                <a href="">Main Page</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-            </nav>
+            -->
         </section>
-        <article>
-            <h2>Facts about Mantis Shrimp</h2>
-            <section>
-                <h4>Scientific classification</h4>
-                <img src="" alt="Picture of Mantis Shrimp">
-                <p>Odontodactylus scyllarus</p>
-                <ul>
-                    <li>Kingdom: Animalia</li>
-                    <li>Phylum : Arthropoda</li>
-                    <li>Subphylum : Crustacea</li>
-                    <li>Class : Malacostraca</li>
-                    <li>Subclass : Hoplocarida</li>
-                    <li>Order : Stomatopoda</li>
-                </ul>
+
+        <article class="text__just">
+            <h2 id="facts">Facts about Mantis Shrimp</h2>
+            <section class="table">
+                <table>
+                    <p class="table__text--background">Mantis Shrimp</p>
+                    <img class="table__image" src="mantisshrimp.jpg" alt="Picture of Mantis Shrimp">
+                    <p class="table__text--background"><em>Odontodactylus scyllarus</em></p>
+                    <h3 id="scienclass">Scientific classification</h3>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Kingdom:</td>
+                        <td>Animalia</td>
+                    </tr>
+                    <tr>
+                        <td>Phylum:</td>
+                        <td>Arthropoda</td>
+                    </tr>
+                    <tr>
+                        <td>Subphylum:</td>
+                        <td>Crustacea</td>
+                    </tr>
+                    <tr>
+                        <td>Class:</td>
+                        <td>Malacostraca</td>
+                    </tr>
+                    <tr>
+                        <td>Subclass:</td>
+                        <td>Hoplocarida</td>
+                    </tr>
+                    <tr>
+                        <td>Order:</td>
+                        <td>Stomatopoda</td>
+                    </tr>
+                </table>
             </section>
-            <ul>
-                <section>
-                    <h2>Habitat</h2>
-                    The Mantis Shrimp lives in warm, shallow water, and typically grows to be between 6 - 12 inches in length.
-                </section>
-                <section>
-                    <h2>Nuclear bomb of light and beauty.</h2>
-                    While humans have three types of color-receptive cones, the mantis shrimp has <strong>SIXTEEN</strong> color-receptive cones.
-                </section>
-                <section>
-                    <h2>Came in like more than a wrecking ball.</h2>
-                    It has two raptorial appendages on the front of its body that accelerate with the same velocity as a gunshot from a twenty-two caliber rifle, and in less than three-thousandths of a second can strike prey with 1,500 Newtons of force.
-                    <aside>
-                        <h3>Throwing into orbit</h3>
-                        <p>To put this in perspective, if human beings could accelerate our arms at 1/10th that speed, we'd be able to throw a baseball into orbit.</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>The fastest hands in the ocean</h2>
-                    <li>Their limbs move so quickly the water around them <strong>boils</strong> in a process known as <em>syoercavutation</em>. When theses cavitation bubble collapse it produces an <strong>undersea shockwave</strong> that can kill prey even if the mantis shrimp misses its target.</li>
-                    <aside>
-                        <h3>The power in his hands</h3>
-                        <p>The force of there collapsing bubbles also produces temperatures in te range of several thousand Kelvins and emitis <strong>tiny bursts of light.</strong> This effect is called <em>sonoluminescence</em>.</p>
-                    </aside>
-                </section>  
-            </ul> 
+            <section>
+                <h3 class="subtitles">Habitat</h3>
+                <img class="habitatpic" src="Mantis_shrimp_front.jpg">
+                <p>Mantis shrimp live in burrows where they spend the majority of their time. The two different categories of mantis shrimp – spearing and smashing – favor different locations for burrowing. The spearing species build their habitat in soft sediments and the smashing species make burrows in hard substrata or coral cavities. These two habitats are crucial for their ecology since they use burrows as sites for retreat and as locations for consuming their prey. Burrows and coral cavities are also used as sites for mating and for keeping their eggs safe.Stomatopod body size undergoes periodic growth which necessitates finding a new cavity or burrow that will fit the animal's new diameter. Some spearing species can modify their pre-established habitat if the burrow is made of silt or mud, which can be expanded.</p>
+            </section>
+            <section>
+                <h3 class="subtitles">Nuclear bomb of light and beauty.</h3>
+                <p>While humans have three types of color-receptive cones, the mantis shrimp has <strong>SIXTEEN</strong> color-receptive cones.</p>
+            </section>
+            <section>
+                <h3 class="subtitles">Came in like more than a wrecking ball.</h3>
+                <p>It has two raptorial appendages on the front of its body that accelerate with the same velocity as a gunshot from a twenty-two caliber rifle, and in less than three-thousandths of a second can strike prey with 1,500 Newtons of force.</p>
+                <aside class="aside">
+                    <h4>Throwing into orbit</h4>
+                    <p>To put this in perspective, if human beings could accelerate our arms at 1/10th that speed, we'd be able to throw a baseball into orbit.</p>
+                </aside>
+            </section>
+            <section>
+                <h3 class="subtitles">The fastest hands in the ocean</h3>
+                <p>Their limbs move so quickly the water around them <strong>boils</strong> in a process known as <em>syoercavutation</em>. When theses cavitation bubble collapse it produces an <strong>undersea shockwave</strong> that can kill prey even if the mantis shrimp misses its target.</p>
+                <aside class="aside">
+                    <h4>The power in his hands</h4>
+                    <p>The force of there collapsing bubbles also produces temperatures in te range of several thousand Kelvins and emitis <strong>tiny bursts of light.</strong> This effect is called <em>sonoluminescence</em>.</p>
+                </aside>
+            </section>   
         </article>
     </body>
 </html>
