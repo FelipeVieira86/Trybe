@@ -9,10 +9,10 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let newNumber = [numbers[0]];
 
-console.log(newNumber)
 for (let i = 0; i < numbers.length-1; i += 1) { 
     newNumber.push(newNumber[i]*numbers[i+1])
   }
   newNumber.push((newNumber[newNumber.length-1]) * 2);
   newNumber.shift();
+console.log(numbers);  
 console.log(newNumber);
