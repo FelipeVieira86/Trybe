@@ -1,15 +1,20 @@
 //faça uma pirâmide com n asteriscos de base
+let n = 9;
+let numberOfLines = (n + 1) / 2; // 5
+let controlLeft = numberOfLines; // 5
+let controlRight = numberOfLines; // 5
+let lineInput = "";
 
-let n = 5;
-let line = "";
-for (i = 0; i < n-3; i += 1){
-  line += " ";
+for (let i = 0; i < numberOfLines; i+=1) {
+  for (let lineColumn = 1; lineColumn <= n; lineColumn+=1) {
+    if (lineColumn <= controlLeft && lineColumn >= controlRight) {
+      lineInput = lineInput + "*";
+    } else {
+      lineInput = lineInput + " ";
+    }
+  }
+  console.log(lineInput);
+  lineInput = "";
+  controlRight -= 1; 
+  controlLeft += 1;
 }
-  line += "*";
-  console.log(line);
-for (j = 1; j < n; j += 2){
-  line = line.substring(1);
-  line += "**";
-  console.log(line);
-}
-
