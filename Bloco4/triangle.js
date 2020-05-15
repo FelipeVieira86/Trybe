@@ -1,13 +1,8 @@
-//Faça um programa que defina três variáveis com os valores dos três ângulos internos de um 
-//triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e 
-//false caso contrário.
+//faça um programa que imprima um triângulo retângulo com n asteriscos de base.
 
-let a = 60;
-let b = 90;
-let c = 20;
-
-if (a + b + c == 180) {
-  console.log(true);
-} else {
-  console.log(false)
+let n = 5;
+let line = "";
+for (j = 0; j < n; j += 1){
+  line += "*";
+  console.log(line);
 }
