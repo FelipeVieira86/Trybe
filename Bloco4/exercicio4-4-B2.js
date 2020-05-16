@@ -1,5 +1,6 @@
 //Faça um programa que receba um numero e retorne uma string em algarismos romanos.
-var numeroRomano = [
+
+let numeroRomano = [
   [1000, 'M'],
   [900, 'CM'],
   [500, 'D'],
@@ -15,18 +16,16 @@ var numeroRomano = [
   [1, 'I']
 ];
 
+
 function convertToRoman(num) {
   if (num === 0) {
     return '';
   }
-  for (var i = 0; i < numeroRomano.length; i++) {
+  for (let i = 0; i < numeroRomano.length; i++) {
     if (num >= numeroRomano[i][0]) {
       return numeroRomano[i][1] + convertToRoman(num - numeroRomano[i][0]);
     }
   }
 }
-console.log(convertToRoman(9));
-console.log(convertToRoman(91));
-console.log(convertToRoman(19));
-console.log(convertToRoman(235));
-console.log(convertToRoman(444));
+
+for (const key in vetorRomano) { console.log(convertToRoman(vetorRomano[key])); }

@@ -1,6 +1,7 @@
 //Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
-
-let numeroRomano = {
+ vetorRomano=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX','XXI','XXII','XXIII','XXIV','XXV','XXVI','XXVII','XXVIII','XXIX','XXX','XXXI','XXXII','XXXIII','XXXIV','XXXV','XXXVI','XXXVII','XXXVIII','XXXIX','XL','XLI','XLII','XLIII','XLIV','XLV','XLVI','XLVII','XLVIII','XLIX','L','LI','LII','LIII','LIV','LV','LVI','LVII','LVIII','LIX','LX','LXI','LXII','LXIII','LXIV','LXV','LXVI','LXVII','LXVIII','LXIX','LXX','LXXI','LXXII','LXXIII','LXXIV','LXXV','LXXVI','LXXVII','LXXVIII','LXXIX','LXXX','LXXXI','LXXXII','LXXXIII','LXXXIV','LXXXV','LXXXVI','LXXXVII','LXXXVIII','LXXXIX','XC','XCI','XCII','XCIII','XCIV','XCV','XCVI','XCVII','XCVIII','XCIX','C', 'CDXLIV', 'IM', 'M' ,'MMXX']
+ 
+ let numeroRomano = {
   'I': 1,
   'IV': 4,
   'V': 5,
@@ -31,16 +32,4 @@ function convertFromRoman(num) {
   }
 }
  
-
-console.log("III 3: " + convertFromRoman("III"));
-console.log("VII 7: " + convertFromRoman("VII"));
-console.log("XLIX 49: " + convertFromRoman("XLIX"));
-console.log("LIX 59: " + convertFromRoman("LIX"));
-console.log("XI 11: " + convertFromRoman("XI"));
-console.log("X 10: " + convertFromRoman("X"));
-console.log("XL 40: " + convertFromRoman("XL"));
-console.log("M 1000: " + convertFromRoman("M"));
-console.log("MMXX 2020: " + convertFromRoman("MMXX"));
-console.log("XXI 21: " + convertFromRoman("XXI"));
-console.log("IM 999: " + convertFromRoman("IM"))
-console.log("CDXLIV 444: " + convertFromRoman("CDXLIV"))
+for (const key in vetorRomano) { console.log(convertFromRoman(vetorRomano[key])); }
