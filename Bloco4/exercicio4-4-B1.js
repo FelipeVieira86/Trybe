@@ -21,11 +21,9 @@ function convertFromRoman(num) {
   let numSeparado = num.split("");
   for (i in numeroRomano) {
     for (j = 0; j < numSeparado.length; j += 1) {
-      if (numeroRomano[numSeparado[j]] >= numeroRomano[numSeparado[j+1]]) {
-        soma += numeroRomano[numSeparado[j]];
-      } else if (numeroRomano[numSeparado[j]] < numeroRomano[numSeparado[j+1]]){
+      if (numeroRomano[numSeparado[j]] < numeroRomano[numSeparado[j+1]]) {
         soma -= numeroRomano[numSeparado[j]];
-      } else {
+      } else { (numeroRomano[numSeparado[j]] < numeroRomano[numSeparado[j+1]]) 
         soma += numeroRomano[numSeparado[j]];
       }
     }
