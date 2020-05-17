@@ -17,12 +17,11 @@ let numeroRomano = [
   [1, 'I']
 ];
 
-
 function convertToRoman(num) {
   if (num === 0) {
     return '';
   }
-  for (let i = 0; i < numeroRomano.length; i++) {
+  for (let i = 0; i < numeroRomano.length; i += 1) {
     if (num >= numeroRomano[i][0]) {
       return numeroRomano[i][1] + convertToRoman(num - numeroRomano[i][0]);
     }
