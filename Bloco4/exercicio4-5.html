@@ -49,7 +49,7 @@
         -------Crie uma função que mude a cor do quadrado vermelho para branco.
         -------Crie uma função que corrija o texto da tag <h1>.
         -------Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        -------Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
       function inTwoYears(text) {
         document.getElementsByTagName("p")[1].innerHTML = text
@@ -74,6 +74,12 @@
       }
       allCaps("p")
 
+      function showLog(target) {
+        for (i = 0; i < document.getElementsByTagName(target).length; i += 1) {
+          console.log(document.getElementsByTagName(target)[i].innerHTML)
+        }
+      }
+      showLog("p")
     </script>
   </body>
 </html>
