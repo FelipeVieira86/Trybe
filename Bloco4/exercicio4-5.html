@@ -47,8 +47,8 @@
         -------Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
         -------Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
         -------Crie uma função que mude a cor do quadrado vermelho para branco.
- Crie uma função que corrija o texto da tag <h1>.
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        -------Crie uma função que corrija o texto da tag <h1>.
+        -------Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
       function inTwoYears(text) {
@@ -61,6 +61,19 @@
       }
       backColor("main-content","green")
       backColor("center-content","white")
+      
+      function modText(target,text) {
+        document.getElementsByTagName(target)[0].innerHTML = text
+      }
+      modText("h1","Exercício 4.5 - JavaScript")
+
+      function allCaps(target) {
+        for (i = 0; i < document.getElementsByTagName(target).length; i += 1) {
+          document.getElementsByTagName(target)[i].innerHTML = document.getElementsByTagName(target)[i].innerHTML.toUpperCase()
+        }
+      }
+      allCaps("p")
+
     </script>
   </body>
 </html>
