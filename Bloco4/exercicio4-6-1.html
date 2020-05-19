@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.6</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        function setclass(elemento, classe) {
+            elemento.className = classe;
+        }
+        function create(onde, elemento) {
+            onde.appendChild(elemento)
+        }
+        function setContent(elemento,content) {
+            elemento.innerText = content;
+        }
+        
+//-----------------Parte1---------------------//
+        let h1Passo1 = document.createElement("h1");
+
+        h1Passo1.innerText = "Exercicio 4.6 - JavaScript DOM";
+
+        create(document.body, h1Passo1);
+//----------------Parte2,3,4---------------------//
+        let divPasso2 = document.createElement("div");
+        let divPasso3 = document.createElement("div");
+        let pPasso4 = document.createElement("p");
+        
+        pPasso4.innerText = "texto p";
+
+        setclass(divPasso2, "main-content");
+        setclass(divPasso3, "center-content");
+
+        create(document.body, divPasso2);
+        create(document.getElementsByClassName("main-content")[0], divPasso3);
+        create(document.getElementsByClassName("center-content")[0],pPasso4);
+//----------------Parte5,6---------------------//
+        let divPasso5 = document.createElement("div");
+        let divPasso6 = document.createElement("div");
+        
+        setclass(divPasso5, "left-content");
+        setclass(divPasso6, "right-content");
+        
+        create(document.getElementsByClassName("main-content")[0], divPasso5);
+        create(document.getElementsByClassName("main-content")[0], divPasso6);
+//--------------Parte7-------------------------//
+        let img = document.createElement("img");
+
+        img.src = "https://picsum.photos/200";
+        
+        setclass(img, "small-image");
+
+        create(document.getElementsByClassName("left-content")[0], img);
+
+//--------------Parte8-------------------------//
+        let list = document.createElement("ul");
+        let um = document.createElement("li");
+        let dois = document.createElement("li");
+        let tres = document.createElement("li");
+        let quatro = document.createElement("li");
+        let cinco = document.createElement("li");
+        let seis = document.createElement("li");
+        let sete = document.createElement("li");
+        let oito = document.createElement("li");
+        let nove = document.createElement("li");
+        let dez = document.createElement("li");
+
+        create(document.getElementsByClassName("right-content")[0],list);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,um);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,dois);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,tres);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,quatro);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,cinco);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,seis);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,sete);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,oito);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,nove);
+        create(document.getElementsByClassName("right-content")[0].firstElementChild,dez);
+
+        setContent(um,"um");
+        setContent(dois,"dois");
+        setContent(tres,"tres");
+        setContent(quatro,"quatro");
+        setContent(cinco,"cinco");
+        setContent(seis,"seis");
+        setContent(sete,"sete");
+        setContent(oito,"oito");
+        setContent(nove,"nove");
+        setContent(dez,"dez");
+
+
+//---------------Parte9---------------//
+        let h3umPasso9 = document.createElement("h3")
+        let h3doisPasso9 = document.createElement("h3")
+        let h3tresPasso9 = document.createElement("h3")
+
+        create(document.getElementsByClassName("main-content")[0], h3umPasso9)
+        create(document.getElementsByClassName("main-content")[0], h3doisPasso9)
+        create(document.getElementsByClassName("main-content")[0], h3tresPasso9)
+
+//---------------Alterações---------------//
+h1Passo1.className = "title";
+h3umPasso9.className ="description";
+h3doisPasso9.className ="description";
+h3tresPasso9.className ="description";
+document.getElementsByClassName("main-content")[0].removeChild(document.getElementsByClassName("left-content")[0]);
+document.getElementsByClassName("right-content")[0].style.marginRight = "auto";
+document.getElementsByClassName("center-content")[0].style.backgroundColor = "green"
+for (i = 0; i < 2; i++) {
+document.getElementsByClassName("right-content")[0].firstElementChild.removeChild(document.getElementsByClassName("right-content")[0].firstElementChild.lastElementChild)
+}
+    </script>
+  </body>
+</html>
