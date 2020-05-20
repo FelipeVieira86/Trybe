@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #button-task1 {
+        width: 100px;
+        height: 30px;
+        margin-left: 45%;
+      }
+      #button-task2 {
+        margin-left: 44%;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="excontainer">
+      <div id="pagecontent">
+        <h1>Event handlers exercise</h1>
+
+        <h2>Task 1</h2>
+
+        <p>
+          Add a HTML button to this page in the area highlighted below. Using
+          the <b>onClick()</b> event handler have the button, when clicked, open
+          an <b>alert()</b> box which says "You clicked the button".
+        </p>
+
+        <button id="button-task1">Button</button>
+
+        <h2>Task 2</h2>
+
+        <p>
+          Add two lines of script to the &lt;script&gt; tag in the source of
+          this page marked for this task (<b>lines 40 - 60</b>). The first line
+          should declare a new variable called <b>gamePrice</b> and should
+          assign it the value <b>39.99</b>. The second should declare a new
+          variable called <b>discount</b> and assign it the value 0.20.
+        </p>
+
+        <p>
+          Add a HTML button below the &lt;script&gt; tag. Give this button an
+          <b>onClick</b> event handler. When the button is clicked it should
+          multiply <b>gamePrice</b> by <b>discount</b> and present an alert box
+          containing the phrase "£(result) off!". You will need
+          <a
+            href="http://nptcstudents.co.uk/andrewg/jsweb/maths.html"
+            target="_blank"
+            >concatenation</a
+          >
+          to achieve this.
+        </p>
+
+        <script language="javascript" type="text/javascript"></script>
+        <button id="button-task2">Get Discount!!11!!1!!</button>
+        <p>
+          You may want to consider using JavaScript's built in
+          <a href="http://www.w3schools.com/js/js_obj_math.asp" target="_blank"
+            >Maths object</a
+          >
+          to round the number you get in your result to a more reasonable one.
+        </p>
+
+        <h2>Extensions</h2>
+        <ol>
+          <li>
+            <p>
+              For this task you will need two images of the same size. Add one
+              image into this page using a html <b>&lt;img /&gt;</b> tag. Using
+              the <b>onMouseOver()</b> and <b>onMouseOut()</b> event handlers
+              try and make the image change to the second image when the mouse
+              pointer hovers over it, and then swap back to the first image when
+              the mouse pointer is moved off of the image.
+            </p>
+            <p>
+              <a href="http://www.htmlite.com/JS019.php" target="_blank"
+                >This tutorial</a
+              >
+              may be of help!
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+  <script>
+    function roundToTwo(num) {
+      return +(Math.round(num + "e+2") + "e-2");
+    }
+    let gamePrice = 39.99;
+    let discount = 0.2;
+    let buttonTask2 = document.querySelector("#button-task2");
+    let totalDisc = roundToTwo(discount * gamePrice)
+    buttonTask2.addEventListener("click", onClick2);
+    let button = document.querySelector("#button-task1");
+    button.addEventListener("click", onClick);
+    function onClick() {
+      alert("You clicked the button.");
+    }
+    function onClick2() {
+      alert("Ta barato pra caramba!!11! Ganhou " + totalDisc + " de dixcontus");
+    }
+  </script>
+</html>
