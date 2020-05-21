@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>Cat Walk</title>
- 
-</head>
- 
- <body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+  </head>
+  <body>
+    <img
+      style="position: absolute;"
+      src="http://www.anniemation.com/clip_art/images/cat-walk.gif"
+    />
+  </body>
+  <script>
+    let img = document.querySelector("img");
+    img.style.left = "0px";
+    let direction = 0;
+    let marginLeft;
+    let timer = 0;
 
-  
-  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
-  
- </body>
- <script>
-  let img = document.querySelector("img");
-  img.style.left = "0px"
-  setInterval(catWalk, 50)
-  if (img.style.left > innerWidth) {
-    img.style.transform = "scaleX(-1)"
-  }
-  function catWalk() {
-    let marginLeft = parseInt(img.style.left);
-    img.style.left = (marginLeft + 10).toString() + "px"
-    if (marginLeft > innerWidth) {
-      img.style.left = '0px';
-    } 
-  }
- </script>
+    function catWalk() {
+      marginLeft = parseInt(img.style.left);
+      if (marginLeft > innerWidth - 333 && direction === 0) {
+        direction = 1;
+      }
+      if (marginLeft <= 0) {
+        direction = 0;
+      }
+      if (direction === 0) {
+        img.style.left = (marginLeft + 10).toString() + "px";
+        img.style.transform = "scaleX(1)";
+      } else {
+        img.style.left = (marginLeft - 10).toString() + "px";
+        img.style.transform = "scaleX(-1)";
+      }
+    }
+    setInterval(catWalk, 50);
+  </script>
 </html>
-
