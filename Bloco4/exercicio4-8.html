@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lorem Ipsum - All the facts - Lipsum generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .textinput {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label>Cor de fundo: </label>
+      <select id="background-color">
+        <option>Selicione uma cor </option>
+        <option id="background-color-blue">Blue</option>
+        <option id="background-color-black">Black</option>
+        <option id="background-color-pink">Pink</option>
+        <option id="background-color-yellow">Yellow</option>
+      </select>
+
+      <input id="background-color-textinput" class="textinput" />
+      <button id="background-color-textinput-button">Change</button>
+    </div>
+
+    <div>
+      <label>Cor da letra: </label>
+
+      <button id="font-color-white">White</button>
+      <button id="font-color-black">Black</button>
+
+      <input id="font-color-textinput" class="textinput" />
+      <button id="font-color-textinput-button">Change</button>
+    </div>
+    <div>
+      <label>Tamanho da letra: </label>
+
+      <button id="font-size-18">18px</button>
+      <button id="font-size-24">24px</button>
+      <button id="font-size-30">30px</button>
+
+      <input id="font-size-textinput" class="textinput" />
+      <button id="font-size-textinput-button">Change</button>
+    </div>
+    <div></div>
+
+    Espaçamento entre linhas:
+    <input id="line-height-textinput" class="textinput" />
+    <button id="line-height-textinput-button">Change</button>
+
+    <h1>Lorem Ipsum</h1>
+    <h4>
+      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+      consectetur, adipisci velit..."
+    </h4>
+    <h5>
+      "There is no one who loves pain itself, who seeks after it and wants to
+      have it, simply because it is pain..."
+    </h5>
+
+    <div>
+      <h2>What is Lorem Ipsum?</h2>
+      <p>
+        <strong>Lorem Ipsum</strong> is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only
+        five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </div>
+    <div>
+      <h2>Why do we use it?</h2>
+      <p>
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English. Many desktop publishing packages and web
+        page editors now use Lorem Ipsum as their default model text, and a
+        search for 'lorem ipsum' will uncover many web sites still in their
+        infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like).
+      </p>
+    </div>
+     
+    <div>
+      <h2>Where can I get some?</h2>
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humour, or
+        randomised words which don't look even slightly believable. If you are
+        going to use a passage of Lorem Ipsum, you need to be sure there isn't
+        anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+        generators on the Internet tend to repeat predefined chunks as
+        necessary, making this the first true generator on the Internet. It uses
+        a dictionary of over 200 Latin words, combined with a handful of model
+        sentence structures, to generate Lorem Ipsum which looks reasonable. The
+        generated Lorem Ipsum is therefore always free from repetition, injected
+        humour, or non-characteristic words etc.
+      </p>
+      <div id="Lipsum-Unit5" style="margin: 10px 0;"></div>
+    </div>
+
+    <script>
+      //variaveis
+      let selecaoCor = document.getElementById("background-color");
+      let body = document.getElementsByTagName("body")[0];
+      let html = document.getElementsByTagName("html")[0];
+      let fundoPreto = document.getElementById("background-color-black");
+      let fundoRosa = document.getElementById("background-color-pink");
+      let fundoAzul = document.getElementById("background-color-blue");
+      let fundoAmarelo = document.getElementById("background-color-yellow");
+      let fundoTexto = document.getElementById("background-color-textinput");
+      let fundoBotaoTexto = document.getElementById(
+        "background-color-textinput-button"
+      );
+      let letraPreta = document.getElementById("font-color-black");
+      let letraBranca = document.getElementById("font-color-white");
+      let letraTexto = document.getElementById("font-color-textinput");
+      let letraBotaoTexto = document.getElementById(
+        "font-color-textinput-button"
+      );
+      let tamanhoLetra18 = document.getElementById("font-size-18");
+      let tamanhoLetra24 = document.getElementById("font-size-24");
+      let tamanhoLetra30 = document.getElementById("font-size-30");
+      let tamanhoLetraTexto = document.getElementById("font-size-textinput");
+      let tamanhoLetraBotaoTexto = document.getElementById(
+        "font-size-textinput-button"
+      );
+      let tamanhoEspacoBotaoTexto = document.getElementById(
+        "line-height-textinput-button"
+      );
+      let tamanhoEspacoTexto = document.getElementById("line-height-textinput");
+      //getitems
+      let backgroundColor = localStorage.getItem("backgroundColor");
+      let color = localStorage.getItem("color");
+      let fontSize = localStorage.getItem("font-size");
+      let lineHeight = localStorage.getItem("line-height");
+
+      //presets
+      body.style.backgroundColor = backgroundColor;
+      body.style.color = color;
+      body.style.fontSize = fontSize;
+      body.style.lineHeight = lineHeight;
+
+      //events
+      selecaoCor.addEventListener("change", changeBackgroundColor);
+      fundoBotaoTexto.addEventListener("click", changeBackgroundColor);
+      fundoAzul.addEventListener("click", changeBackgroundColor);
+      fundoAmarelo.addEventListener("click", changeBackgroundColor);
+      fundoPreto.addEventListener("click", changeBackgroundColor);
+      fundoRosa.addEventListener("click", changeBackgroundColor);
+      letraBranca.addEventListener("click", changeFontColor);
+      letraPreta.addEventListener("click", changeFontColor);
+      letraBotaoTexto.addEventListener("click", changeFontColor);
+      tamanhoLetra18.addEventListener("click", changeFontSize);
+      tamanhoLetra24.addEventListener("click", changeFontSize);
+      tamanhoLetra30.addEventListener("click", changeFontSize);
+      tamanhoLetraBotaoTexto.addEventListener("click", changeFontSize);
+      tamanhoEspacoBotaoTexto.addEventListener("click", changeLineHeight);
+
+      //functions
+      function changeBackgroundColor() {
+        if (event.srcElement.value == "Blue") {
+          body.style.backgroundColor = "blue";
+          localStorage.setItem("backgroundColor", "blue");
+        }
+        if (event.srcElement.value == "Yellow") {
+          body.style.backgroundColor = "yellow";
+          localStorage.setItem("backgroundColor", "yellow");
+        }
+        if (event.srcElement.value == "Black") {
+          body.style.backgroundColor = "black";
+          if (body.style.color === "" || body.style.color === "black") {
+            body.style.color = "white";
+          }
+          localStorage.setItem("backgroundColor", "black");
+          localStorage.setItem("color", "white");
+        }
+        if (event.srcElement.value == "Pink") {
+          body.style.backgroundColor = "pink";
+          localStorage.setItem("backgroundColor", "pink");
+        }
+        if (event.target == fundoBotaoTexto) {
+          body.style.backgroundColor = fundoTexto.value;
+          localStorage.setItem("backgroundColor", fundoTexto.value);
+          fundoTexto.value = "";
+        }
+      }
+
+      function changeFontColor() {
+        if (event.target == letraPreta) {
+          body.style.color = "black";
+          localStorage.setItem("color", "black");
+        }
+        if (event.target == letraBranca) {
+          body.style.color = "white";
+          localStorage.setItem("color", "white");
+        }
+        if (event.target == letraBotaoTexto) {
+          body.style.color = letraTexto.value;
+          localStorage.setItem("color", letraTexto.value);
+          letraTexto.value = "";
+        }
+      }
+
+      function changeFontSize() {
+        if (event.target == tamanhoLetra18) {
+          body.style.fontSize = "18px";
+          body.style.lineHeight = "18px";
+          localStorage.setItem("font-size", "18px");
+          localStorage.setItem("line-height", "18px");
+        }
+
+        if (event.target == tamanhoLetra24) {
+          body.style.fontSize = "24px";
+          body.style.lineHeight = "24px";
+          localStorage.setItem("font-size", "24px");
+          localStorage.setItem("line-height", "24px");
+        }
+
+        if (event.target == tamanhoLetra30) {
+          body.style.fontSize = "30px";
+          body.style.lineHeight = "30px";
+          localStorage.setItem("font-size", "30px");
+          localStorage.setItem("line-height", "30px");
+        }
+
+        if (event.target == tamanhoLetraBotaoTexto) {
+          let tamTxt = tamanhoLetraTexto.value + "px";
+          body.style.fontSize = tamTxt;
+          body.style.lineHeight = tamTxt;
+          localStorage.setItem("font-size", tamTxt);
+          localStorage.setItem("line-height", tamHei);
+        }
+      }
+
+      function changeLineHeight() {
+        let tamHei = tamanhoEspacoTexto.value + "px";
+        body.style.lineHeight = tamHei;
+        localStorage.setItem("line-height", tamHei);
+      }
+    </script>
+  </body>
+</html>
