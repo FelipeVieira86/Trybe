@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <fieldset name="dadosPessoais">
+      <p>Nome</p>
+      <label for="name">
+        <input id="name" name="name" type="text" maxlength="40" required />
+      </label>
+      <span>Email</span>
+      <label for="email">
+        <input id="email" name="email" type="text" maxlength="50" required />
+      </label>
+      <span>CPF</span>
+      <label for="cpf">
+        <input id="cpf" name="cpf" type="text" required maxlength="11" />
+      </label>
+      <p>Endereço</p>
+      <label for="adress">
+        <input type="text" name="adress" id="adress" maxlength="200" required />
+      </label>
+      <span>Cidade</span>
+      <label for="cidade">
+        <input type="text" name="cidade" id="cidade" maxlength="28" required />
+      </label>
+      <span>Estado</span>
+      <label for="estados">
+        <select name="estados" id="estados" required> </select>
+      </label>
+      <span>Tipo de residencia</span>
+      <label for="tipoCasa">
+        <input type="radio" name="residencia" id="tipoCasa" value="Casa" />Casa
+      </label>
+      <label for="tipoAp">
+        <input type="radio" name="residencia" id="tipoAp" value="Ap"/>Apartamento
+      </label>
+    </fieldset>
+    <fieldset>
+      <p>Resumo do Curriculo</p>
+      <textarea name="curriculum" id="curriculum" cols="30" rows="10" required maxlength="1000"></textarea>
+      <p>Cargo</p>
+      <input name="cargo" id="cargo" type="text" maxlength="40" required>
+      <p>Descrição do Cargo</p>
+      <input name="descCargo" id="descCargo" type="text" maxlength="500" required>
+      <p>Data de Inicio</p>
+      <input name="datainicio" id="datainicio" type="text" maxlength="10" required>
+    </fieldset>
+    <button id="submit" type="submit">Enviar</button>
+    <div id="consolidado" hidden></div>
+  </body>
+  <script src="script.js"></script>
+</html>
