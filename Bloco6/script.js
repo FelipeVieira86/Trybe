@@ -64,21 +64,41 @@ const arrayCampos = [
   curriculum,
   cargo,
   descCargo,
-  dataInicio
+  dataInicio,
 ];
+
 const botaoSubmit = document.getElementById('submit');
-botaoSubmit.addEventListener('click', function () {
-  event.preventDefault();
+
+
+const botaoCancel = document.getElementById('cancel');
+botaoCancel.addEventListener('click', function () {
   for (let index = 0; index < arrayCampos.length; index++) {
-    let p = document.createElement('p');
     if (arrayCampos[index].type == 'radio') {
       if (arrayCampos[index].checked) {
-        consolida.appendChild(p);
-        p.innerText = `TipoRes: ${arrayCampos[index].value}`;
+        arrayCampos[index].checked = false;
       }
-    } else {
-      consolida.appendChild(p);
-      p.innerText = `${arrayCampos[index].id}: ${arrayCampos[index].value}`;
     }
+    arrayCampos[index].value = '';
   }
 });
+
+if ($('html').hasClass('no-touch')) {
+  var $input, $btn;
+  $('.date-wrapper').each(function (index) {
+    $input = $(this).find('input');
+    $btn = $(this).find('.calendar-btn');
+    $input.attr('type', 'text');
+    var pickerStart = new Pikaday({
+      field: $input[0],
+      trigger: $btn[0],
+      container: $(this)[0],
+      format: 'DD/MM/YYYY',
+      firstDay: 1,
+    });
+    $btn.show();
+  });
+} else {
+  $('.date-wrapper input').attr('type', 'date');
+  $('.calendar-btn').hide();
+}
+validation.init();
