@@ -1,4 +1,5 @@
 const estados = document.getElementById('estados');
+let forms = $('#form').parsley();
 
 function geraEstados() {
   const array = [
@@ -39,6 +40,7 @@ function geraEstados() {
   }
 }
 geraEstados();
+const form = document.querySelector('form');
 const consolida = document.getElementById('consolidado');
 const campoNome = document.getElementById('name');
 const campoEmail = document.getElementById('email');
@@ -51,7 +53,7 @@ const campoTipoAp = document.getElementById('tipoAp');
 const curriculum = document.getElementById('curriculum');
 const cargo = document.getElementById('cargo');
 const descCargo = document.getElementById('descCargo');
-const dataInicio = document.getElementById('datainicio');
+const dataInicio = document.getElementById('data');
 const arrayCampos = [
   campoNome,
   campoEmail,
@@ -68,8 +70,22 @@ const arrayCampos = [
 ];
 
 const botaoSubmit = document.getElementById('submit');
-
-
+botaoSubmit.addEventListener('click', function () {
+  if (forms.isValid()) {
+    for (let index = 0; index < arrayCampos.length; index++) {
+      let p = document.createElement('p');
+      if (arrayCampos[index].type == 'radio') {
+        if (arrayCampos[index].checked) {
+          consolida.appendChild(p);
+          p.innerText = `TipoRes: ${arrayCampos[index].value}`;
+        }
+      } else {
+        consolida.appendChild(p);
+        p.innerText = `${arrayCampos[index].id}: ${arrayCampos[index].value}`;
+      }
+    }
+  }
+});
 const botaoCancel = document.getElementById('cancel');
 botaoCancel.addEventListener('click', function () {
   for (let index = 0; index < arrayCampos.length; index++) {
@@ -81,24 +97,4 @@ botaoCancel.addEventListener('click', function () {
     arrayCampos[index].value = '';
   }
 });
-
-if ($('html').hasClass('no-touch')) {
-  var $input, $btn;
-  $('.date-wrapper').each(function (index) {
-    $input = $(this).find('input');
-    $btn = $(this).find('.calendar-btn');
-    $input.attr('type', 'text');
-    var pickerStart = new Pikaday({
-      field: $input[0],
-      trigger: $btn[0],
-      container: $(this)[0],
-      format: 'DD/MM/YYYY',
-      firstDay: 1,
-    });
-    $btn.show();
-  });
-} else {
-  $('.date-wrapper input').attr('type', 'date');
-  $('.calendar-btn').hide();
-}
 validation.init();
