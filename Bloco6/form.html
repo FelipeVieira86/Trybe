@@ -2,56 +2,202 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://antonlapshin.github.io/popup-validation/validation.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <fieldset name="dadosPessoais">
-      <p>Nome</p>
-      <label for="name">
-        <input id="name" name="name" type="text" maxlength="40" required />
-      </label>
-      <span>Email</span>
-      <label for="email">
-        <input id="email" name="email" type="text" maxlength="50" required />
-      </label>
-      <span>CPF</span>
-      <label for="cpf">
-        <input id="cpf" name="cpf" type="text" required maxlength="11" />
-      </label>
-      <p>Endereço</p>
-      <label for="adress">
-        <input type="text" name="adress" id="adress" maxlength="200" required />
-      </label>
-      <span>Cidade</span>
-      <label for="cidade">
-        <input type="text" name="cidade" id="cidade" maxlength="28" required />
-      </label>
-      <span>Estado</span>
-      <label for="estados">
-        <select name="estados" id="estados" required> </select>
-      </label>
-      <span>Tipo de residencia</span>
-      <label for="tipoCasa">
-        <input type="radio" name="residencia" id="tipoCasa" value="Casa" />Casa
-      </label>
-      <label for="tipoAp">
-        <input type="radio" name="residencia" id="tipoAp" value="Ap"/>Apartamento
-      </label>
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input
+          data-validate="required"
+          class="form-control validate"
+          id="name"
+          name="name"
+          type="text"
+          maxlength="40"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email"> Email</label>
+        <input
+          data-validate="required,email"
+          class="form-control validate"
+          id="email"
+          name="email"
+          type="text"
+          maxlength="50"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input
+          data-validate="required"
+          class="form-control validate"
+          id="cpf"
+          name="cpf"
+          type="text"
+          required
+          maxlength="11"
+        />
+      </div>
+      <div class="form-group">
+        <label for="adress">Endereço</label>
+        <input
+          data-validate="required"
+          class="form-control validate"
+          type="text"
+          name="adress"
+          id="adress"
+          maxlength="200"
+          required
+        />
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="cidade">Cidade</label>
+          <input
+            data-validate="required"
+            class="form-control validate"
+            type="text"
+            name="cidade"
+            id="cidade"
+            maxlength="28"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="estados">Estado</label>
+          <select
+            data-validate="required"
+            class="form-control validate"
+            name="estados"
+            id="estados"
+            required
+          >
+          </select>
+        </div>
+
+        <div class="form-check-inline col-md-1">
+          <input
+            class="form-check-input validate"
+            type="radio"
+            name="residencia"
+            id="tipoCasa"
+            value="Casa"
+          />
+          <label class="form-check-label" for="tipoCasa">Casa</label>
+        </div>
+        <div class="form-check-inline col-md-1">
+          <input
+            class="form-check-input validate"
+            type="radio"
+            name="residencia"
+            id="tipoAp"
+            value="Ap"
+          />
+          <label class="form-check-label" for="tipoAp">Apartamento </label>
+        </div>
+      </div>
     </fieldset>
     <fieldset>
-      <p>Resumo do Curriculo</p>
-      <textarea name="curriculum" id="curriculum" cols="30" rows="10" required maxlength="1000"></textarea>
-      <p>Cargo</p>
-      <input name="cargo" id="cargo" type="text" maxlength="40" required>
-      <p>Descrição do Cargo</p>
-      <input name="descCargo" id="descCargo" type="text" maxlength="500" required>
-      <p>Data de Inicio</p>
-      <input name="datainicio" id="datainicio" type="text" maxlength="10" required>
+      <div class="form-group">
+        <label for="curriculum">Resumo do Curriculo</label>
+        <textarea
+          data-validate="required"
+          class="form-control validate"
+          name="curriculum"
+          id="curriculum"
+          cols="30"
+          rows="10"
+          required
+          maxlength="1000"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <input
+          data-validate="required"
+          class="form-control validate"
+          name="cargo"
+          id="cargo"
+          type="text"
+          maxlength="40"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="descCargo">Descrição do Cargo</label>
+        <input
+          data-validate="required"
+          class="form-control validate"
+          name="descCargo"
+          id="descCargo"
+          type="text"
+          maxlength="500"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="datainicio">Data de Inicio</label>
+        <input
+        data-validate="required"
+          type="date"
+          name="experience-end"
+          id="datepicker-end"
+          class="input-text validate"
+          placeholder="dd/mm/yyyy"
+        />
+      </div>
+      <a href="#" class="calendar-btn hide-text">View calendar</a>
     </fieldset>
-    <button id="submit" type="submit">Enviar</button>
+    <button class="btn btn-lg btn-success" id="submit" type="button">
+      Enviar
+    </button>
+    <button class="btn btn-sm btn-warning" id="cancel" type="button">
+      Limpar
+    </button>
     <div id="consolidado" hidden></div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script>
+      var picker = new Pikaday({
+        field: document.getElementById('datepicker'),
+      });
+    </script>
+    <script src="https://antonlapshin.github.io/popup-validation/validation.min.js"></script>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
