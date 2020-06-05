@@ -1,0 +1,48 @@
+body {
+  margin: 0 10%;
+  font-size: 1.5em;
+  text-align: justify;
+}
+h1 {
+  font-size: 1.3em;
+  margin: 2% auto;
+}
+h2 {
+  font-size: 1.2em;
+  margin: 2% auto;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+  }
+  .figure-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  figure {
+    width: 40%;
+    margin: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: teal;
+    font-size: 1.2em;
+    margin: 0 5%;
+  }
+  p {
+    margin: 2% auto;
+  }
+}

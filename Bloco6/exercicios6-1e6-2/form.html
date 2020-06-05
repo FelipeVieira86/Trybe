@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Forms do Balacobaco</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://antonlapshin.github.io/popup-validation/validation.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="form" class="form-panel" data-parsley-validate>
+      <fieldset name="dadosPessoais">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input
+            data-validate="required"
+            class="form-control validate"
+            id="name"
+            name="name"
+            type="text"
+            maxlength="40"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email"> Email</label>
+          <input
+            data-validate="required, email"
+            data-parsley-type="email"
+            class="form-control validate"
+            id="email"
+            name="email"
+            type="text"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input
+            data-validate="required"
+            data-parsley-type="number"
+            data-parsley-length="[11, 11]"
+            class="form-control validate"
+            id="cpf"
+            name="cpf"
+            type="text"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="adress">Endereço</label>
+          <input
+            data-validate="required"
+            class="form-control validate"
+            type="text"
+            name="adress"
+            id="adress"
+            maxlength="200"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="cidade">Cidade</label>
+            <input
+              data-validate="required"
+              class="form-control validate"
+              type="text"
+              name="cidade"
+              id="cidade"
+              maxlength="28"
+              required
+            />
+          </div>
+          <div class="form-group col-md-2">
+            <label for="estados">Estado</label>
+            <select
+              data-validate="required"
+              class="form-control validate"
+              name="estados"
+              id="estados"
+              required
+            >
+            </select>
+          </div>
+
+          <div class="form-check-inline col-md-1">
+            <input
+              data-validate="required"
+              class="form-check-input validate"
+              type="radio"
+              name="residencia"
+              id="tipoCasa"
+              value="Casa"
+              data-parsley-multiple="mymultiplelink"
+              required
+            />
+            <label class="form-check-label" for="tipoCasa">Casa</label>
+          </div>
+          <div class="form-check-inline col-md-1">
+            <input
+              data-validate="required"
+              data-parsley-multiple="mymultiplelink"
+              class="form-check-input validate"
+              type="radio"
+              name="residencia"
+              id="tipoAp"
+              value="Ap"
+              required
+            />
+            <label class="form-check-label" for="tipoAp">Apartamento </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="form-group">
+          <label for="curriculum">Resumo do Curriculo</label>
+          <textarea
+            data-validate="required"
+            class="form-control validate"
+            name="curriculum"
+            id="curriculum"
+            cols="30"
+            rows="10"
+            required
+            maxlength="1000"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="cargo">Cargo</label>
+          <input
+            data-validate="required"
+            class="form-control validate"
+            name="cargo"
+            id="cargo"
+            type="text"
+            maxlength="40"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="descCargo">Descrição do Cargo</label>
+          <input
+            data-validate="required"
+            class="form-control validate"
+            name="descCargo"
+            id="descCargo"
+            type="text"
+            maxlength="500"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="datainicio">Data de Inicio</label>
+          <input
+            data-validate="required"
+            name="experience"
+            id="data"
+            class="input-text col-md-3 form-control validate"
+            required
+          />
+        </div>
+      </fieldset>
+    </form>
+    <button class="btn btn-lg btn-success" id="submit" type="button">
+      Enviar
+    </button>
+    <button class="btn btn-sm btn-warning" id="cancel" type="button">
+      Limpar
+    </button>
+    <div id="consolidado" hidden></div>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="moment.js"></script>
+    <script src="pikaday.js"></script>
+    <script>
+      var picker = new Pikaday({
+        field: document.getElementById('data'),
+        firstDay: 1,
+        format: 'DD/MM/YYYY',
+        minDate: new Date(),
+        maxDate: new Date(2020, 12, 31),
+        yearRange: [2000, 2020],
+      });
+    </script>
+    
+    <script src="parsley.min.js"></script>
+    <script src="https://antonlapshin.github.io/popup-validation/validation.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
