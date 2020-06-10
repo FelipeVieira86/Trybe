@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://antonlapshin.github.io/popup-validation/validation.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 562.01px)"
+      href="style.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 562px)"
+      href="mobilestyle.css"
+    />
+    <title>Facebook</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="pappa-div">
+        <div class="img-container">
+          <img src="facebook-logo.png" class="facebook-logo" />
+        </div>
+        <div class="login-container">
+          <div class="hide-on-pc">
+            <div class="conectar">Você deve se conectar primeiro.</div>
+            <div class="login-mobile">
+              <input
+                class="login-mobile-email"
+                type="text"
+                placeholder="Número de celular ou email"
+              />
+              <input
+                class="login-mobile-pass"
+                type="password"
+                placeholder="Senha"
+              />
+            </div>
+            <button class="login-mobile-button" type="button">Entrar</button>
+            <span class="login-mobile-division">ou</span>
+            <button class="mobile-cadastre" type="button">
+              Criar nova conta
+            </button>
+            <p class="mobile-forgot">Esqueceu a senha?</p>
+            <div class="mobile-langs">
+              <div class="mobile-left-column">
+                <p class="lang lang-pt">Português (Brasil)</p>
+                <p class="lang">Español</p>
+                <p class="lang">Deutsch</p>
+                <p class="lang">العربية</p>
+              </div>
+              <div class="mobile-right-column">
+                <p class="lang">English (US)</p>
+                <p class="lang">Français (France)</p>
+                <p class="lang">Italiano</p>
+                <div class="plus-div">
+                  <p class="lang plus">+</p>
+                </div>
+              </div>
+            </div>
+            <p class="mobile-face-inc">Facebook, Inc.</p>
+          </div>
+          <table cellspacing="0">
+            <tr>
+              <td>
+                <label id="user-email-phone-label" for="user-mail-phone"
+                  >Email ou telefone</label
+                >
+              </td>
+              <td>
+                <label for="user-password">Senha</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="user-email-phone" />
+              </td>
+              <td>
+                <input id="user-password" type="password" />
+              </td>
+              <td>
+                <button class="botao-login"
+                id="button-login"
+                type="button">Entrar</button>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="esqueceu-conta">Esqueceu a conta?</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+    <article class="body-container">
+      <div class="left-column">
+        <p>
+          O Facebook ajuda você a se conectar e compartilhar com as pessoas que
+          fazem parte da sua vida.
+        </p>
+        <img
+          class="networking"
+          id="facebook-networking"
+          src="networking.png"
+          alt="People networking."
+        />
+      </div>
+      <div class="right-column">
+        <h1>Abra uma conta</h1>
+        <h2>É rápido e fácil.</h2>
+        <div class="nome-sobrenome">
+          <input
+            data-validate="required"
+            class="Nome input validate"
+            type="text"
+            placeholder="Nome"
+          />
+          <input
+            data-validate="required"
+            class="Nome input validate"
+            type="text"
+            placeholder="Sobrenome"
+          />
+        </div>
+        <input
+          data-validate="required"
+          class="input validate"
+          type="text"
+          placeholder="Celular ou email"
+        />
+        <input
+          data-validate="required"
+          class="input validate"
+          type="password"
+          placeholder="Nova senha"
+        />
+        <label class="label" for="data">Data de nascimento</label>
+        <div>
+          <input
+            data-validate="required"
+            class="input Nome validate"
+            id="data"
+            type="text"
+            placeholder="dd/mm/aaaa"
+          />
+          <img class="question" src="question.png" alt="Interrogação" />
+        </div>
+        <label class="label genero">Gênero</label>
+        <div class="genero-container">
+          <label for="Feminino">
+            <input
+              data-validate="required"
+              id="Feminino"
+              type="radio"
+              name="Genero"
+              value="Feminino"
+            />
+            Feminino
+          </label>
+          <label for="Masculino">
+            <input
+              data-validate="required"
+              id="Masculino"
+              type="radio"
+              name="Genero"
+              value="Masculino"
+            />
+            Masculino
+          </label>
+          <label for="Personalizado">
+            <input
+              data-validate="required"
+              id="Personalizado"
+              type="radio"
+              name="Genero"
+              value="Personalizado"
+            />
+            Personalizado
+          </label>
+        </div>
+        <img class="question" src="question.png" alt="Interrogação" />
+        <p class="termos">
+          Ao clicar em Cadastre-se, você concorda com nossos
+          <span class="blue">Termos</span>,
+          <span class="blue">Política de Dados</span> e
+          <span class="blue">Política de Cookies</span>. Você pode receber
+          notificações por SMS e pode cancelar isso quando quiser.
+        </p>
+        <button class="cadastre-se" id="facebook-register" type="button">
+          Cadastre-se
+        </button>
+        <p class="criar-pagina">
+          <span class="blue">Criar uma página</span> para uma celebridade, banda
+          ou empresa.
+        </p>
+      </div>
+    </article>
+    <script src="https://antonlapshin.github.io/popup-validation/validation.min.js"></script>
+    <script src="libs/moment.js"></script>
+    <script src="libs/pikaday.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
