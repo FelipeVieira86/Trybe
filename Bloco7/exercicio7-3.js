@@ -18,7 +18,7 @@ assert.strictEqual(sum(0, 0), 0);
 // 1c - Teste se a função sum lança um erro quando os parametros são 4 e "5"(string 5)
 assert.throws(() => {
   sum(4, '5');
-})
+});
 // 1d - Teste se a mensagem de erro é “parameters must be numbers” quando realizar a chamada sum(4, "5")
 assert.throws(() => {
   sum(4, '5');
@@ -219,7 +219,7 @@ function getChange(payable, paid) {
   let remaining = paid - payable;
 
   if (remaining < 0) throw new Error('paid value is not enough');
-  
+
   while (remaining > 0) {
     for (i = 0; i < coins.length; i += 1) {
       if (coins[i] <= remaining) {
