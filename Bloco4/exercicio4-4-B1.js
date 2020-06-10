@@ -20,7 +20,6 @@ let numeroRomano = {
 function convertFromRoman(num) {
   let soma = 0;
   let numSeparado = num.split("");
-//  for (i in numeroRomano) {
     for (j = 0; j < numSeparado.length; j += 1) {
       if (numeroRomano[numSeparado[j]] < numeroRomano[numSeparado[j+1]]) {
         soma -= numeroRomano[numSeparado[j]];
@@ -30,6 +29,6 @@ function convertFromRoman(num) {
     }
     return soma;
   }
-//}
+
  
 for (const key in vetorRomano) { console.log(convertFromRoman(vetorRomano[key])); }
