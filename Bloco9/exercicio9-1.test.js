@@ -1,5 +1,4 @@
 const testes = require('./exercicio9-1');
-const { myRemove } = require('./exercicio9-1');
 // 1
 
 describe('exercicios9-1-1', () => {
