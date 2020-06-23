@@ -43,7 +43,7 @@ describe('exercicio9-1-3', () => {
     expect(testes.mySum([1, 2, 3, 4])).toBe(10);
   });
   // Teste se a chamada mySum([1, -2, -3, 4]) retorna o valor esperado
-  test('mySum([1, -2, -3, 4])', () => {
+  test('mySum([1, -2, -3, 4]) = 0', () => {
     expect(testes.mySum([1, -2, -3, 4])).toBe(0);
   });
 });
@@ -65,7 +65,7 @@ describe('exercicio9-1-4', () => {
     expect(arr).toEqual([1, 2, 3, 4]);
   });
   // Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
-  test('myRemove([1, 2, 3, 4], 5)', () => {
+  test('myRemove([1, 2, 3, 4], 5) = [1, 2, 3, 4]', () => {
     expect(testes.myRemove(arr, 5)).toEqual([1, 2, 3, 4]);
   });
 });
