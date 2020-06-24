@@ -135,10 +135,11 @@ describe('exercicio9-1-8', () => {
 });
 
 // 9
+const {obj1, obj2} = testes
 describe('exercicio9-1-9', () => {
   // Compare dois objetos (JSON) para verificar se são idênticos ou não
   test('obj1 e obj2 são iguais', () => {
-    expect(testes.obj1).toEqual(testes.obj2);
+    expect(obj1).toEqual(obj2);
   });
 });
 
