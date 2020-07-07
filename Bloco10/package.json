@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
