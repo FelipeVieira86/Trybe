@@ -22,6 +22,34 @@
   box-sizing: border-box;
 }
 
+.Psychic {
+  background-color: rgb(255, 82, 241);
+}
+
+.Dragon {
+  background-color: rgb(143, 123, 241);
+}
+
+.Normal {
+  background-color: rgb(105, 133, 105);
+}
+
+.Electric {
+  background-color: rgb(253, 251, 114);
+}
+
+.Poison {
+  background-color: rgb(170, 111, 170);
+}
+
+.Bug {
+  background-color: rgb(65, 138, 65);
+}
+
+.Fire {
+  background-color: rgb(243, 85, 85);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,4 +58,3 @@
     transform: rotate(360deg);
   }
 }
-

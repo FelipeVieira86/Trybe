@@ -3,7 +3,7 @@ import React from 'react';
 class pokemon extends React.Component {
   render() {
     return (
-    <section className='pokecontainer'>
+    <section className={`pokecontainer ${this.props.type}`}>
       <div> 
       <p>{this.props.name}</p>
       <p>{this.props.type}</p>
