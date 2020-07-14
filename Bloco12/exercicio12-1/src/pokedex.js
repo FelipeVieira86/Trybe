@@ -25,10 +25,9 @@ class pokedex extends React.Component {
 
   render() {
     const pokemonsList = this.filterType(this.state.pokemonType)
-    const pokemon = pokemonsList[this.state.index];
     return (
       <div>
-        <Pokemons pokemon={pokemon} />
+        <Pokemons pokemon={pokemonsList[this.state.index]} />
         <Button onClick={() => this.nextPokemon(pokemonsList.length)} label="Proximo Pokemon" />
         <Button onClick={() => this.setType('Fire')} label="Fire" />
         <Button onClick={() => this.setType('Psychic')} label="Psychic" />
