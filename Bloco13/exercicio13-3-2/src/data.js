@@ -1,5 +1,59 @@
 const pokemons = [
   {
+    id: 214,
+    name: 'Heracross',
+    type: 'Bug, Fighter',
+    averageWeight: {
+      value: '83,66',
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn.bulbagarden.net/upload/8/88/PinRSani214.png',
+    moreInfo: 'https://bulbapedia.bulbagarden.net/wiki/Heracross_(Pok%C3%A9mon)',
+    foundAt: [
+      {
+        location: "Johto's route 29",
+        map: 'https://cdn.bulbagarden.net/upload/thumb/5/5c/Johto_Route_29_HGSS.png/300px-Johto_Route_29_HGSS.png',
+      }
+    ],
+    summary: "Heracross charges in a straight line at its foe, slips beneath the foe's grasp, and then scoops up and hurls the opponent with its mighty horn. This Pokémon even has enough power to topple a massive tree."
+  },
+  {
+    id: 535,
+    name: 'Tympole',
+    type: 'Water',
+    averageWeight: {
+      value: '6,16',
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn.bulbagarden.net/upload/d/da/Spr_5b_535.png',
+    moreInfo: 'https://bulbapedia.bulbagarden.net/wiki/Tympole_(Pok%C3%A9mon)',
+    foundAt: [
+      {
+        location: 'Pinwell Forest',
+        map: 'https://cdn.bulbagarden.net/upload/6/65/Unova_Pinwheel_Forest_Map.png'
+      }
+    ],
+    summary: 'By vibrating its cheeks, it emits sound waves imperceptible to humans. It uses the rhythm of these sounds to talk.'
+  },
+  {
+    id: 345,
+    name: 'Lileep',
+    type: 'Rock, Grass',
+    averageWeight: {
+      value: '22.89',
+      measurementUnit: 'kg',
+    },
+    image: 'https://cdn.bulbagarden.net/upload/f/f0/PinRSani345.png',
+    moreInfo: 'https://bulbapedia.bulbagarden.net/wiki/Lileep_(Pok%C3%A9mon)',
+    foundAt: [
+      {
+        location: 'Revive from Root Fossil at the Nacrene Museum',
+        map: 'https://cdn.bulbagarden.net/upload/3/35/Unova_Nacrene_City_Map.png',
+      },
+    ],
+    summary: 'Lileep is an ancient Pokémon that was regenerated from a fossil. It remains permanently anchored to a rock. From its immobile perch, this Pokémon intently scans for prey with its two eyes.'
+  },
+  {
     id: 25,
     name: 'Pikachu',
     type: 'Electric',
