@@ -1,0 +1,119 @@
+body {
+  background-color: green;
+  margin: 2% 5%;
+}
+
+h1 {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+li {
+  border-bottom: 1px dotted rgb(175 , 175 , 175);
+  cursor: pointer;
+  height: auto;
+  list-style: none;
+  margin-left: 0;
+  padding: 10px;
+  padding-left: 7%;
+  text-indent: 25px;
+  user-select: none;
+}
+
+ol {
+  background-color: honeydew;
+  border: 1px solid rgb(218 , 217 , 217);
+  color: rgb(80 , 80 , 80);
+  font-family: courier, monospace;
+  font-size: 22px;
+  margin-left: 5%;
+  padding: 0;
+  width: 90%;
+}
+
+p {
+  color: dimgrey;
+  text-align: center;
+}
+
+.arrow {
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+}
+
+.arrow-bottom {
+  margin-bottom: 10%;
+  transform: rotate(135deg);
+}
+
+.arrow-top {
+  margin-top: 10%;
+  transform: rotate(-45deg);
+}
+
+.blue {
+  background-color: rgb(0 , 140 , 255);
+}
+
+.button {
+  border: solid 1px transparent;
+  border-radius: 60px;
+  color: white;
+  font-weight: 700;
+  padding: 0.3% 2%;
+}
+
+.button--small {
+  width: 60px;
+}
+
+.bbox {
+  text-align: center;
+}
+
+.completed {
+  text-decoration: line-through black;
+}
+
+.corpo {
+  align-content: center;
+  background-color: white;
+  border-radius: 30px;
+  display: block;
+  margin: 5% 10% 1%;
+  padding: 5%;
+}
+
+.green {
+  background-color: rgb(69 , 173 , 64);
+}
+
+.lines {
+  border-left: 1px solid rgb(255 , 170 , 159);
+  border-right: 1px solid rgb(255 , 170 , 159);
+  height: 0;
+  margin-left: 8%;
+  margin-top: 22px;
+  position: absolute;
+  width: 2px;
+}
+
+.orange {
+  background-color: rgb(251 , 130 , 63);
+}
+
+.red {
+  background-color: rgb(104 , 31 , 31);
+}
+
+.selected {
+  background-color: gray;
+}
+
+.tasks {
+  text-align: center;
+}

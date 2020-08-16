@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'PressStart2P-Regular';
+  src: url('./PressStart2P-Regular.woff') format('woff'),
+    url('./PressStart2P-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.color , .pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  display: table;
+  flex-flow: wrap;
+  line-height: 0;
+  margin: 2% auto;
+  text-align: center;
+}
+
+.black {
+  background-color: black;
+}
+
+body {
+  background-color: rgb(61, 59, 59);
+  background-image: url(https://i.imgur.com/SYY2mJz.png);
+  background-size: cover;
+  color: white;
+  font-family: 'PressStart2P-Regular';
+  text-shadow: 5px 5px black;
+  text-align: center;
+}
+
+.color-palette {
+  margin: 2% auto;
+  border: ridge black 2px;
+}
+
+button {
+	background-color:rgb(234, 224, 194);
+	background:linear-gradient(to bottom, #eae0c2 5%, rgb(204, 194, 166) 100%);
+  border:2px ridge rgb(51, 48, 41);
+	box-shadow: 0px 1px 0px 0px rgb(28, 27, 24);
+	color:black;
+	cursor:pointer;
+	display:inline-block;
+  font-family: 'PressStart2P-Regular';
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px white;
+}
+button:hover {
+	background-color:rgb(204, 194, 166);
+	background:linear-gradient(to bottom, rgb(204, 194, 166) 5%, rgb(234, 224, 194) 100%);
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+input {
+  width: 50px;
+}
