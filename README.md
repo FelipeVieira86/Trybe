@@ -97,35 +97,35 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 19-3: *React Hooks - useEffect and custom Hooks*
 - [x] 19-4: *[Project - Datatable StarWars with Context API and Hooks]()*
 ##### Block 19: Final Front-end Project
-- [ ] 20-1: *[Project - Recipe App]()*
+- [x] 20-1: *[Project - Recipe App]()*
 
 ## Back-end development :hourglass_flowing_sand:
 ##### Block 20: Introduction - Relational Databases
-- [ ] 21-1: *SQL database*
-- [ ] 21-2: *Finding data in a database*
-- [ ] 21-3: *Filtering data specifically*
-- [ ] 21-4: *Manipulating tables*
-- [ ] 21-5: *[Project - All For One]()*
+- [x] 21-1: *SQL database*
+- [x] 21-2: *Finding data in a database*
+- [x] 21-3: *Filtering data specifically*
+- [x] 21-4: *Manipulating tables*
+- [x] 21-5: *[Project - All For One]()*
 ##### Block 21: Relational Databases
-- [ ] 22-1: *Most used functions in SQL*
-- [ ] 22-2: *Uncomplicating JOINs and UNIONs*
-- [ ] 22-3: *Stored Routines & Subqueries*
-- [ ] 22-4: *[Project - Vocabulary Booster]()*
+- [x] 22-1: *Most used functions in SQL*
+- [x] 22-2: *Uncomplicating JOINs and UNIONs*
+- [x] 22-3: *Stored Routines & Subqueries*
+- [x] 22-4: *[Project - Vocabulary Booster]()*
 ##### Block 22: Relational Databases
-- [ ] 23-1: *Transforming ideas into a database model*
-- [ ] 23-2: *Transforming ideas into a database model - Part 2*
-- [ ] 23-3: *[Project - Queries Unite]()*
+- [x] 23-1: *Transforming ideas into a database model*
+- [x] 23-2: *Transforming ideas into a database model - Part 2*
+- [x] 23-3: *[Project - Queries Unite]()*
 ##### Block 23: Relational Databases
-- [ ] 24-1: *Normalization and Normal Forms*
-- [ ] 24-29: *[Dumps & Project - One For All]()*
+- [x] 24-1: *Normalization and Normal Forms*
+- [x] 24-29: *[Dumps & Project - One For All]()*
 ##### Block 24: Introduction - NoSQL
-- [ ] 25-1: *MongoDB - Introduction*
-- [ ] 25-2: *MongoDB - Find*
-- [ ] 25-3: *Filter Operators*
-- [ ] 24-4: *[Project - Data Flights]()*
+- [x] 25-1: *MongoDB - Introduction*
+- [x] 25-2: *MongoDB - Find*
+- [x] 25-3: *Filter Operators*
+- [x] 24-4: *[Project - Data Flights]()*
 ##### Block 25: Updates
-- [ ] 26-1: *Simple Updates*
-- [ ] 26-2: *Complex Updates - Arrays - Part 1*
+- [x] 26-1: *Simple Updates*
+- [x] 26-2: *Complex Updates - Arrays - Part 1*
 - [ ] 26-3: *Complex Updates - Arrays - Part 2*
 - [ ] 26-4: *[Project - Commerce]()*
 ##### Block 26: Aggregation Framework
